@@ -1,0 +1,5 @@
+section {
+    flex-direction: row;
+    float: left;
+    text-align: justify;
+}

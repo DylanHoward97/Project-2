@@ -5,3 +5,6 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
+p {
+    background-color: darkcyan;
+}

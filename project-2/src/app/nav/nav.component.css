@@ -2,11 +2,14 @@ nav {
     font-size: 18px;
     background-color: rgb(237, 237, 237);
     margin-top: 10px;
+    background-color: darkcyan;
 }
 
 nav a {
     display: inline-block;
     text-decoration: none;
-    padding: 10px 24px;
+    padding: 10px 12px;
     color: lightcoral;
+    border-radius: 20px;
+    border: solid 1px black;
 }

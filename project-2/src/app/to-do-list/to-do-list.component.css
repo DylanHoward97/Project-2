@@ -1,0 +1,17 @@
+main {
+    padding: 24px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2 {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+section {
+    text-align: center;
+    display: inline-flex;
+    width: 300px;
+    justify-content: center;
+}

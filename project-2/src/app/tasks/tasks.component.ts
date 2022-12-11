@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tasks',
@@ -10,5 +10,12 @@ export class TasksComponent {
   @Input() taskName: string = '';
   @Input() creationDate: string = '';
   @Input() completedDate: string = '';
+  @Input() location: string = '';
+
+  @Output()listChangeEvent = new EventEmitter<string>();
+
+  changeList(index: number, destination: string) {
+    this.listChangeEvent.emit(destination);
+  }
 
 }

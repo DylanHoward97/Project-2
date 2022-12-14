@@ -1,5 +1,30 @@
+main {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 section {
+    display: inline-flex;
     flex-direction: row;
-    float: left;
-    text-align: justify;
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+p {
+    padding: 30px;
+}
+
+button {
+    padding: 10px;
+    
+}
+
+.leftSide {
+    border-radius: 20px;
+    border: solid 1px black;
+}
+
+.rightSide {
+    align-items: right;
 }

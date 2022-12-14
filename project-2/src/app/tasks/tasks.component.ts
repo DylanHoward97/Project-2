@@ -14,8 +14,6 @@ export class TasksComponent {
 
   @Output()listChangeEvent = new EventEmitter<string>();
 
-  changeList(index: number, destination: string) {
-    this.listChangeEvent.emit(destination);
-  }
+
 
 }

@@ -40,7 +40,13 @@ button {
     border-radius: 10px;
     border: solid 3px darkcyan;
     padding: 5px;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+table {
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 

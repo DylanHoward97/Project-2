@@ -42,3 +42,9 @@ button {
     padding: 5px;
     margin-left: 20px;
 }
+
+table {
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}

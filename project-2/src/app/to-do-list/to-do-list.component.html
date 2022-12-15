@@ -21,12 +21,11 @@
    <table>
         <thead>
             <tr>
-                <th>Complete?</th>
+                <th></th>
                 <th>Task Name</th>
                 <th>Creation Date</th>
                 <th>Due Date</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th></th>
             </tr>
         </thead>
 
@@ -39,8 +38,8 @@
                 <td>{{ task.taskName }}</td>
                 <td>{{ task.creationDate }}</td>
                 <td>{{ task.dueDate }}</td>
-                <td><button><i class="fa fa-edit" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button></td>
-                <td><button (click)="deleteTask(i)"><i class="fa fa-trash" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button></td>
+                <td><button><i class="fa fa-edit" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                <button (click)="deleteTask(i)"><i class="fa fa-trash" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button></td>
             </tr>
 
         </ng-container>

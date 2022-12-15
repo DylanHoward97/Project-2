@@ -2,6 +2,7 @@ main {
     padding: 24px;
     margin-right: auto;
     margin-left: auto;
+    justify-content: center;
 }
 
 h2 {

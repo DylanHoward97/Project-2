@@ -8,22 +8,24 @@ import { Tasks } from '../models/tasks';
 })
 export class ToDoListComponent {
 
-  tasks: any = [
-    {
-      taskName: 'Do Dishes',
-      creationDate: '12/13/2022',
-      dueDate: '12/13/2022',
-      location: 'inToDoList',
-      index: 1
-    }
-  ]
+  tasks: any = []
 
   newTask: Tasks = new Tasks('', '', '', 'inToDoList', this.tasks.length - 1);
 
   addTask(): void {
     this.tasks.push({...this.newTask});
     console.log(this.tasks[this.tasks.length - 1]);
+    this.newTask.index = this.tasks.length;
   }
+
+  editTask(): void{
+
+  }
+  
+  deleteTask(i: number): void {
+      this.tasks.splice(i, 1);
+  }
+
   
 
 }

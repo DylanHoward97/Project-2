@@ -32,7 +32,7 @@
 
         <tbody>
 
-        <ng-container *ngFor="let task of tasks">
+        <ng-container *ngFor="let task of tasks, let i = index">
 
             <tr>
                 <td><button></button></td>
@@ -40,7 +40,7 @@
                 <td>{{ task.creationDate }}</td>
                 <td>{{ task.dueDate }}</td>
                 <td><button><i class="fa fa-edit" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button></td>
-                <td><button><i class="fa fa-trash" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button></td>
+                <td><button (click)="deleteTask(i)"><i class="fa fa-trash" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button></td>
             </tr>
 
         </ng-container>

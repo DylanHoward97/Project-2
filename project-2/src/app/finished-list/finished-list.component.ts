@@ -7,15 +7,7 @@ import { Tasks } from '../models/tasks';
   styleUrls: ['./finished-list.component.css']
 })
 export class FinishedListComponent {
-  tasks: any = [
-    {
-      taskName: 'Do Dishes',
-      creationDate: '12/13/2022',
-      dueDate: '12/13/2022',
-      location: 'inToDoList',
-      index: 1
-    }
-  ]
+  tasks: any = []
 
   newTask: Tasks = new Tasks('', '', '', 'inToDoList', this.tasks.length - 1);
 
@@ -23,4 +15,9 @@ export class FinishedListComponent {
     this.tasks.push({...this.newTask});
     console.log(this.tasks[this.tasks.length - 1]);
   }
+
+  deleteTask(i: number): void {
+    this.tasks.splice(i, 1);
+  }
+
 }

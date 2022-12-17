@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-tasks',
@@ -12,8 +12,11 @@ export class TasksComponent {
   @Input() completedDate: string = '';
   @Input() location: string = '';
 
-  @Output()listChangeEvent = new EventEmitter<string>();
 
+  @Output() updateTaskEvent = new EventEmitter<string>();
+  @Output() listChangeEvent = new EventEmitter<string>();
 
+  
+  
 
 }

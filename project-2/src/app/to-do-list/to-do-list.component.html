@@ -31,18 +31,47 @@
 
         <tbody>
 
-        <ng-container *ngFor="let task of tasks, let i = index">
+            <ng-container *ngFor="let task of tasks, let i = index">
 
-            <tr>
-                <td><button></button></td>
-                <td>{{ task.taskName }}</td>
-                <td>{{ task.creationDate }}</td>
-                <td>{{ task.dueDate }}</td>
-                <td><button><i class="fa fa-edit" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
-                <button (click)="deleteTask(i)"><i class="fa fa-trash" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button></td>
-            </tr>
-
-        </ng-container>
+                <tr>
+                    <td><button></button></td>
+                    <td>
+                        <div *ngIf="!task.isEdit">
+                            {{ task.taskName }}
+                        </div>
+                        <div *ngIf="task.isEdit">
+                            <input placeholder="{{ task.taskName }}" type="text" [(ngModel)]="task.taskName" class="form-control"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="!task.isEdit">
+                            {{ task.creationDate }}
+                        </div>
+                        <div *ngIf="task.isEdit">
+                            <input placeholder="{{ task.creationDate }}" type="date" [(ngModel)]="task.creationDate" class="form-control"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="!task.isEdit">
+                            {{ task.dueDate }}
+                        </div>
+                        <div *ngIf="task.isEdit">
+                            <input placeholder="{{ task.dueDate }}" type="date" [(ngModel)]="task.dueDate" class="form-control"/>
+                        </div> 
+                    </td>
+                    <td>
+                        <div *ngIf="task.isEdit">
+                            <button (click)="updateTask(task)"><i class="fa fa-check" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="task.isEdit = false"><i class="fa fa-close" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                        </div>
+                        <div *ngIf="!task.isEdit">
+                            <button (click)="onEdit(task)"><i class="fa fa-edit" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="deleteTask(i)"><i class="fa fa-trash" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                        </div>  
+                    </td>
+                </tr>
+    
+            </ng-container>
 
         </tbody>
 

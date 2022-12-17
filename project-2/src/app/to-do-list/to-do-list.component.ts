@@ -11,6 +11,7 @@ export class ToDoListComponent {
   tasks: any = []
 
   newTask: Tasks = new Tasks('', '', '', 'inToDoList', this.tasks.length - 1);
+  task: Tasks = new Tasks('', '', '', 'inToDoList', this.tasks.length - 1);
 
   addTask(): void {
     this.tasks.push({...this.newTask});
@@ -18,9 +19,13 @@ export class ToDoListComponent {
     this.newTask.index = this.tasks.length;
   }
 
-  editTask(): void{
+  onEdit(item: any) {
+    item.isEdit = true;
+   }
 
-  }
+   updateTask(task: { isEdit: boolean;}) {
+      task.isEdit = false;
+   }
   
   deleteTask(i: number): void {
       this.tasks.splice(i, 1);

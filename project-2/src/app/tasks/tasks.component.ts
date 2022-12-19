@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
+import { Tasks } from '../models/tasks';
 
 @Component({
   selector: 'app-tasks',
@@ -7,14 +8,15 @@ import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/
 })
 export class TasksComponent {
 
-  @Input() taskName: string = '';
-  @Input() creationDate: string = '';
-  @Input() completedDate: string = '';
-  @Input() location: string = '';
+  @Input() tasks: any;
 
 
-  @Output() updateTaskEvent = new EventEmitter<string>();
-  @Output() listChangeEvent = new EventEmitter<string>();
+  @Output() listChangeEvent = new EventEmitter<any>();
+
+
+  changeList() {
+    this.listChangeEvent.emit();
+  }
 
   
   

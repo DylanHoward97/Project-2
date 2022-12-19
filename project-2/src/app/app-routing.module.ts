@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FinishedListComponent } from './finished-list/finished-list.component';
 import { HomeComponent } from './home/home.component';
-import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 const routes: Routes = [
   {
@@ -14,12 +13,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'to-do-list',
-    component: ToDoListComponent
-  },
-  {
-    path: 'finished-list',
-    component: FinishedListComponent
+    path: 'tasks',
+    component: TasksComponent
   }
 ];
 

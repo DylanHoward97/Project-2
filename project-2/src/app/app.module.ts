@@ -9,7 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
-import { FinishedListComponent } from './finished-list/finished-list.component';
 import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { TasksComponent } from './tasks/tasks.component';
     FooterComponent,
     NavComponent,
     ToDoListComponent,
-    FinishedListComponent,
     TasksComponent
   ],
   imports: [

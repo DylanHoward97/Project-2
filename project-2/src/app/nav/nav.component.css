@@ -4,6 +4,10 @@ nav {
     margin-top: 10px;
     background-color: darkcyan;
     padding-right: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    justify-content: center;
 }
 
 nav a {
@@ -11,6 +15,17 @@ nav a {
     text-decoration: none;
     padding: 10px 12px;
     color: lightcoral;
-    border-radius: 20px;
-    border: solid 1px black;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: solid 3px lightcoral;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+
+}
+
+nav a:hover {
+    color: rgba(86, 244, 178, 0.9);
+    background-color: rgba(255, 255, 255, 0.2);
 }

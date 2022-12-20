@@ -10,21 +10,3 @@ section {
     justify-content: center;
     padding-top: 30px;
 }
-
-p {
-    padding: 30px;
-}
-
-button {
-    padding: 10px;
-    
-}
-
-.leftSide {
-    border-radius: 20px;
-    border: solid 1px black;
-}
-
-.rightSide {
-    align-items: right;
-}

@@ -13,7 +13,7 @@
             <label for="dueDate" class="formLabel">Due Date: </label>
             <input [(ngModel)]="newTask.dueDate" type="date" class="'formField" name="dueDate" id="dueDate" placeholder="Enter due date" #dueDate="ngModel">
 
-            <button (click)="addTaskToDo(); taskForm.reset()"><i class="fa fa-plus" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+            <button (click)="addTaskToDo(); taskForm.reset()"><i class="fa fa-plus" style="color: darkcyan; padding-top: 3px;"></i></button>
         </div>
 
     </form>
@@ -34,8 +34,8 @@
 
             <ng-container *ngFor="let task of tasks, let i = index">
 
-                <tr>
-                    <td><button (click)="changeList(i, 'finishedList')"><i class="fa fa-check" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button></td>
+                <tr id="taskCard">
+                    <td><button id="completeButton" (click)="changeList(i, 'finishedList')"><i class="fa fa-check" style="color: darkcyan; padding-top: 3px;"></i></button></td>
                     <td>
                         <div *ngIf="!task.isEdit">
                             {{ task.taskName }}
@@ -62,12 +62,12 @@
                     </td>
                     <td>
                         <div *ngIf="task.isEdit">
-                            <button (click)="updateTask(task)"><i class="fa fa-check" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
-                            <button (click)="task.isEdit = false"><i class="fa fa-close" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="updateTask(task)"><i class="fa fa-check" style="color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="task.isEdit = false"><i class="fa fa-close" style="color: darkcyan; padding-top: 3px;"></i></button>
                         </div>
                         <div *ngIf="!task.isEdit">
-                            <button (click)="onEdit(task)"><i class="fa fa-edit" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
-                            <button (click)="deleteTaskToDo(i)"><i class="fa fa-trash" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="onEdit(task)"><i class="fa fa-edit" style="color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="deleteTaskToDo(i)"><i class="fa fa-trash" style="color: darkcyan; padding-top: 3px;"></i></button>
                         </div>  
                     </td>
                 </tr>
@@ -95,7 +95,7 @@
             <label for="dueDate" class="formLabel">Due Date: </label>
             <input [(ngModel)]="newFinishedTask.dueDate" type="date" class="'formField" name="dueDate" id="dueDate" placeholder="Enter due date" #finishedDueDate="ngModel">
 
-            <button (click)="addTaskToFinished(); finishedTaskForm.reset()"><i class="fa fa-plus" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+            <button (click)="addTaskToFinished(); finishedTaskForm.reset()"><i class="fa fa-plus" style="color: darkcyan; padding-top: 3px;"></i></button>
         </div>
 
     </form>
@@ -113,12 +113,10 @@
         </thead>
 
         <tbody>
-
-
             <ng-container *ngFor="let task of finishedTasks, let i = index">
 
-                <tr>
-                    <td><button (click)="changeList(i, 'toDoList')"></button></td>
+                <tr id="taskCard">
+                    <td><button placeholder="Complete Task" id="completeButton" (click)="changeList(i, 'toDoList')"><i class="fa fa-check" style="color: darkcyan; padding-top: 3px;"></i></button></td>
                     <td>
                         <div *ngIf="!task.isEdit">
                             {{ task.taskName }}
@@ -145,12 +143,12 @@
                     </td>
                     <td>
                         <div *ngIf="task.isEdit">
-                            <button (click)="updateTask(task)"><i class="fa fa-check" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
-                            <button (click)="task.isEdit = false"><i class="fa fa-close" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="updateTask(task)"><i class="fa fa-check" style="color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="task.isEdit = false"><i class="fa fa-close" style="color: darkcyan; padding-top: 3px;"></i></button>
                         </div>
                         <div *ngIf="!task.isEdit">
-                            <button (click)="onEdit(task)"><i class="fa fa-edit" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
-                            <button (click)="deleteTaskFinished(i)"><i class="fa fa-trash" style="font-size: 20px; background-color: lightcoral; color: darkcyan; padding-top: 3px;"></i></button>
+                            <button (click)="onEdit(task)"><i class="fa fa-edit"></i></button>
+                            <button (click)="deleteTaskFinished(i)"><i class="fa fa-trash" style="color: darkcyan; padding-top: 3px;"></i></button>
                         </div>  
                     </td>
                 </tr>

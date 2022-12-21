@@ -2,7 +2,7 @@ nav {
     font-size: 18px;
     background-color: rgb(237, 237, 237);
     margin-top: 10px;
-    background-color: darkcyan;
+    background-color: #79A7D3;
     padding-right: 30px;
     margin-right: auto;
     margin-left: auto;
@@ -14,10 +14,10 @@ nav a {
     display: inline-block;
     text-decoration: none;
     padding: 10px 12px;
-    color: lightcoral;
-    background-color: lightgray;
+    color: #8A307F;
+    background-color: white;
     border-radius: 10px;
-    border: solid 3px lightcoral;
+    border: solid 3px #8A307F;
     justify-content: center;
     margin-right: 20px;
     margin-left: 20px;
@@ -25,7 +25,6 @@ nav a {
 
 }
 
-nav a:hover {
-    color: rgba(86, 244, 178, 0.9);
-    background-color: rgba(255, 255, 255, 0.2);
+nav a:hover {    
+    background-color: #c454b7c2;
 }

@@ -3,7 +3,7 @@ main {
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-    background-color: lightgray;
+    background-color:  #6883BC;
 }
 
 h2 {
@@ -40,17 +40,17 @@ input {
 
 button {
     font-size: 20px;
-    background-color: lightcoral;
+    background-color: white;
     border-radius: 7px;
-    border: solid 3px darkcyan;
+    border: solid 3px #8A307F;
     padding: 5px;
     margin-right: 10px;
     justify-content: center;
 }
 
 button:hover {
-    color: rgba(86, 244, 178, 0.9);
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #8A307F;
+    background-color: #c454b7c2;
 }
 
 table {
@@ -58,24 +58,28 @@ table {
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 70px;
-    background-color: lightgray;
+    background-color: #79A7D3;
     border-radius: 10px;
-    border: solid 5px darkcyan;
+    border: solid 5px #8A307F;
     border-spacing: 0;
+    padding: 7px;
 }
 
 th, td {
     justify-content: center;
     padding: 10px;
-    border-bottom: solid 5px darkcyan;
+    border-bottom: solid 5px #8A307F;
 }
 
 tr {
-    border: solid 3px darkcyan;
-    background-color: lightgray;
+    border: solid 3px #8A307F;
+    background-color: #79A7D3;
     border-radius: 5px;
 }
 
+.submitButton {
+    margin-left: 10px;
+}
 
 
 

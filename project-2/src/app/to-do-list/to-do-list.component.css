@@ -9,12 +9,18 @@ main {
 h2 {
     margin-bottom: 24px;
     text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h3 {
     display: inline-flex;
     flex-direction: column;
     padding-right: 100px;
+}
+table div {
+    overflow-wrap: break-word;
+    inline-size: 200px;
 }
 
 section, div {
@@ -24,13 +30,15 @@ section, div {
 
 label {
     padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
 }    
 
 input {
     padding-right: 10px;
     background-color: white;
     border-radius: 5px;
-    border: solid 1px darkgray;
+    border: solid 3px rgb(75, 75, 75);
 }
 
 #completeButton {
@@ -63,12 +71,14 @@ table {
     border: solid 5px #8A307F;
     border-spacing: 0;
     padding: 7px;
+    color: #8A307F;
+    font-weight: bold;  
 }
 
 th, td {
     justify-content: center;
     padding: 10px;
-    border-bottom: solid 5px #8A307F;
+    border-bottom: solid 5px #8A307F; 
 }
 
 tr {
@@ -77,6 +87,25 @@ tr {
     border-radius: 5px;
 }
 
+td {
+    overflow-wrap: break-word;
+    inline-size: 150px;
+    margin-right: 10px;
+    width: fit-content;
+    
+}
+
+tr#taskCard:hover {
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 5px 5px 5px 10px #6883BC; 
+    box-shadow: 5px 5px 5px 10px #6883BC;
+    transition-delay: 400ms;
+    transition-duration: 1s;
+}
 .submitButton {
     margin-left: 10px;
 }

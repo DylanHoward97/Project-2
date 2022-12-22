@@ -6,6 +6,29 @@ main {
     justify-content: center;
 }
 
+button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 12px;
+    color: #8A307F;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 3px #8A307F;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+button:hover {    
+    background-color: #c454b7c2;
+}
+
 h1, h2, p {
     padding-top: 10px;
+    padding-bottom: 10px;
 }

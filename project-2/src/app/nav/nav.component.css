@@ -3,7 +3,6 @@ nav {
     background-color: rgb(237, 237, 237);
     margin-top: 10px;
     background-color: #79A7D3;
-    padding-right: 30px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -11,7 +10,7 @@ nav {
 }
 
 nav a {
-    display: inline-block;
+    display: inline-flex;
     text-decoration: none;
     padding: 10px 12px;
     color: #8A307F;

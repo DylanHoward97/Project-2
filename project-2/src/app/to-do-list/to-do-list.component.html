@@ -62,14 +62,14 @@
                         </div> 
                     </td>
                     <td>
-                        <div *ngIf="task.isEdit">
+                        <section *ngIf="task.isEdit">
                             <button (click)="updateTask(task)"><i class="fa fa-check" style="color: #8A307F; padding-top: 3px;"></i></button>
                             <button (click)="task.isEdit = false"><i class="fa fa-close" style="color: #8A307F; padding-top: 3px;"></i></button>
-                        </div>
-                        <div *ngIf="!task.isEdit">
+                        </section>
+                        <section *ngIf="!task.isEdit">
                             <button (click)="onEdit(task)"><i class="fa fa-edit" style="color: #8A307F; padding-top: 3px;"></i></button>
                             <button (click)="deleteTaskToDo(i)"><i class="fa fa-trash" style="color: #8A307F; padding-top: 3px;"></i></button>
-                        </div>  
+                        </section>  
                     </td>
                 </tr>
     
@@ -119,7 +119,7 @@
             <ng-container *ngFor="let task of finishedTasks, let i = index">
 
                 <tr id="taskCard">
-                    <td><button placeholder="Complete Task" id="completeButton" (click)="changeList(i, 'toDoList')"><i class="fa fa-check" style="color: #8A307F; padding-top: 3px;"></i></button></td>
+                    <td><button placeholder="Complete Task" id="completeButton" (click)="changeList(i, 'toDoList')"><i class="fa fa-close" style="color: #8A307F; padding-top: 3px;"></i></button></td>
                     <td>
                         <div *ngIf="!task.isEdit">
                             {{ task.taskName }}
@@ -145,14 +145,14 @@
                         </div> 
                     </td>
                     <td>
-                        <div *ngIf="task.isEdit">
+                        <section *ngIf="task.isEdit">
                             <button (click)="updateTask(task)"><i class="fa fa-check" style="color: #8A307F; padding-top: 3px;"></i></button>
                             <button (click)="task.isEdit = false"><i class="fa fa-close" style="color: #8A307F; padding-top: 3px;"></i></button>
-                        </div>
-                        <div *ngIf="!task.isEdit">
+                        </section>
+                        <section *ngIf="!task.isEdit">
                             <button (click)="onEdit(task)"><i class="fa fa-edit" style="color: #8A307F; padding-top: 3px;"></i></button>
                             <button (click)="deleteTaskFinished(i)"><i class="fa fa-trash" style="color: #8A307F; padding-top: 3px;"></i></button>
-                        </div>  
+                        </section>  
                     </td>
                 </tr>
     
